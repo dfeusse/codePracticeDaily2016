@@ -12,8 +12,28 @@ Apple =&gt; [1,5]
 Note this is indexed from [1..n] (not zero indexed!)
 '''
 def vowel_indices(word):
-	return word
+	vowels = ['a','e','i','o','u']
+	indice = []
+	ind = 0
+	for i in word:
+		ind += 1
+		if i.lower() in vowels:
+			print i
+			indice.append(ind)
+	return indice
 
 print vowel_indices("Mmmm")
 print vowel_indices("Super")
 print vowel_indices("Apple")
+
+'''
+def vowel_indices(word):
+    return [i for i,x in enumerate(word,1) if x.lower() in 'aeiouy']
+
+def vowel_indices(word):
+    lst = []
+    for i, letter in enumerate(word.lower()):
+        if letter in 'aeiouy':
+            lst.append(i+1)
+    return lst
+ '''
