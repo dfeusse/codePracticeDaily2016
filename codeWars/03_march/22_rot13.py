@@ -19,7 +19,6 @@ def rot13(message):
 		if i.isdigit() == True or i not in string.ascii_lowercase:
 			pone = pone + i
 		else:
-			print string.ascii_lowercase.index(i)
 			newIndex = string.ascii_lowercase.index(i) + 13
 			if newIndex > 24:
 				newIndex = newIndex % 24
